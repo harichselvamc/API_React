@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Base styling for the body */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(to right, #89fffd, #ef32d9); /* Subtle gradient for a modern look */
+  margin: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Container for the app */
+.app-container {
+  width: 100%;
+  max-width: 500px; /* Limiting max width for better control */
+}
+
+/* Card styles with enhanced design */
+.card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Smoother shadow */
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling */
+.user-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px auto; /* Centering the image */
+  border: 5px solid #ef32d9; /* Matching the gradient end color */
+}
+
+/* Title and text styling */
+h2 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.user-info {
+  text-align: left;
+  padding: 0 30px; /* Adding padding for better text alignment */
+}
+
+.user-info p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Bold labels */
+.user-info strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Button styling */
+.btn {
+  background-color: #89fffd; /* Matching the gradient start color */
   color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block; /* Make button a block to fit the container */
+  width: 80%; /* Specific width */
+  margin: 20px auto; /* Center button */
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  background-color: #76e4e1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+  .card {
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .user-info p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
   }
 }
